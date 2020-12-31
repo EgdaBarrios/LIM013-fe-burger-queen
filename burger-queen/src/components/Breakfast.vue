@@ -3,7 +3,23 @@
     <div class="header">
       <h3 class="title">DESAYUNO</h3>
     </div>
-    It's time for breakfast!
+    <div class="container">
+      <div class="subtitle">
+        <h4>Sandwiches</h4>
+      </div>
+      <div class="sandwichList">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p class="itemName">
+              Sandwich de jamón y queso
+            </p>
+            <p class="itemPrice">
+              S/ 10.00
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
