@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link class="topNav" to="/">Inicio</router-link> |
+      <router-link class="topNav" to="/waiter">SoyUnMesero</router-link> |
+      <router-link class="topNav" to="/kitchen">SoyJefeDeCocina</router-link>
     </div>
     <router-view/>
   </div>
@@ -10,23 +11,33 @@
 
 <style lang="scss">
 #app {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1920px;
+  min-width: 360px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
+  background-image: url(assets/background.jpg);
+  background-size: cover;
 }
 
-#nav {
-  padding: 30px;
+.topNav {
+  font-size: 12px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.topNav:link {
+  color: rgb(186, 240, 245);
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.topNav:visited {
+  color: rgb(97, 186, 194);
+}
+
+.topNav:hover:active {
+  color: rgb(106, 227, 238);
 }
 </style>
