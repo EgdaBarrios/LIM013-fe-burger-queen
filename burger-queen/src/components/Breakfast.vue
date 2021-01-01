@@ -8,15 +8,7 @@
         <h4>Sandwiches</h4>
       </div>
       <div class="sandwichList">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <p class="itemName">
-              Sandwich de jamón y queso
-            </p>
-            <p class="itemPrice">
-              S/ 10.00
-            </p>
-          </li>
+        <ul class="list-group" id="breakfastSandwiches">
         </ul>
       </div>
     </div>
@@ -24,7 +16,7 @@
 </template>
 
 <script>
-// import firebase from '../firebase/init';
+// import breakfastMenu from '../firebase';
 
 export default {
   name: 'Breakfast',
