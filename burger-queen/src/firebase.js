@@ -15,7 +15,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
+// utils
 const fs = firebase.firestore();
+
+// collection references
 const breakfastMenuSandwiches = fs.collection('breakfastSandwiches');
 const breakfastMenuDrinks = fs.collection('breakfastDrinks');
 
