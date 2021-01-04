@@ -2,7 +2,7 @@
   <div class="menu">
     <p class="menuDisplaySetting">Hola SoyUnMesero, hoy es {{ date }}, {{ time }}</p>
     <div class="menuDisplayedDueTime">
-      <div class="breakfast" v-if="time > '12'">
+      <div class="breakfast" v-if="time < '12'">
         <Breakfast />
       </div>
       <div class="otherMeals" v-else>
@@ -15,7 +15,6 @@
 <script>
 import Breakfast from './Breakfast.vue';
 import OtherMeals from './OtherMeals.vue';
-// import { all } from '../data/menu';
 
 export default {
   name: 'MenuContainer',

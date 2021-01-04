@@ -8,7 +8,11 @@
         <h4>Sandwiches</h4>
       </div>
       <div class="sandwichList">
-        <ul class="list-group" id="breakfastSandwiches">
+        <ul v-for="bs in breakfastSandwiches" :key="bs.id">
+          <li>
+            <h5>{{ bs.description }}</h5>
+            <p>{{ bs.price }}</p>
+          </li>
         </ul>
       </div>
     </div>
@@ -16,10 +20,18 @@
 </template>
 
 <script>
-// import breakfastMenu from '../firebase';
+import { db } from '../db';
 
 export default {
-  name: 'Breakfast',
+  data() {
+    return {
+      breakfastSandwiches: [],
+    };
+  },
+
+  firestore: {
+    breakfastSandwiches: db.collection('breakfastSandwiches'),
+  },
 };
 </script>
 

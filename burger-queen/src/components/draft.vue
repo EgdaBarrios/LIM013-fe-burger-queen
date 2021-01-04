@@ -25,3 +25,10 @@
   firebase.analytics();
 </script>
 -->
+
+<ul class="list-group" id="breakfastSandwiches" v-if="breakfastSandwiches.length">
+  <li v-for="breakfastSandwiches in breakfastSandwiches" :key="breakfastSandwiches.id">
+    <h5>{{ breakfastSandwiches.description }}</h5>
+    <p>{{ breakfastSandwiches.price }}</p>
+  </li>
+</ul>
