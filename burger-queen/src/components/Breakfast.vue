@@ -5,7 +5,12 @@
     </div>
     <div class="container">
       <div class="contentArea">
-        <div class="subtitle">
+        <div class="breakfastMenu">
+          <ul v-for="b in breakfast" :key="b.id">
+            <li><MenuBtn v-bind:description="b.description" v-bind:price="b.price"/></li>
+          </ul>
+        </div>
+        <!--<div class="subtitle">
           <h4><span class="notBold">Sandwiches</span></h4>
         </div>
         <div class="sandwichList">
@@ -20,60 +25,28 @@
               </button>
             </li>
           </ul>
-        </div>
-        <div class="subtitle">
-          <h4><span class="notBold">Bebidas Calientes</span></h4>
-        </div>
-        <div class="drinkList">
-          <ul v-for="bhd in breakfastHotDrinks" :key="bhd.id">
-            <li>
-              <button type="button" class="itemBtn">
-                <img class="iconImg" alt="Sandwich" src="../assets/iconCup.png">
-                <div class="textBtn">
-                  <h5>{{ bhd.description }}</h5>
-                  <p>S/ {{ bhd.price }}.00</p>
-                </div>
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="subtitle">
-          <h4><span class="notBold">Bebidas Frías</span></h4>
-        </div>
-        <div class="drinkList">
-          <ul v-for="bcd in breakfastColdDrinks" :key="bcd.id">
-            <li>
-              <button type="button" class="itemBtn">
-                <img class="iconImg" alt="Sandwich" src="../assets/iconJuice.png">
-                <div class="textBtn">
-                  <h5>{{ bcd.description }}</h5>
-                  <p>S/ {{ bcd.price }}.00</p>
-                </div>
-              </button>
-            </li>
-          </ul>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import MenuBtn from '@/components/MenuBtn.vue';
 import { db } from '../db';
 
 export default {
+  name: 'Breakfast',
+  components: {
+    MenuBtn,
+  },
   data() {
     return {
-      breakfastSandwiches: [],
-      breakfastHotDrinks: [],
-      breakfastColdDrinks: [],
+      breakfast: [],
     };
   },
-
   firestore: {
-    breakfastSandwiches: db.collection('breakfastSandwiches'),
-    breakfastHotDrinks: db.collection('breakfastHotDrinks'),
-    breakfastColdDrinks: db.collection('breakfastColdDrinks'),
+    breakfast: db.collection('breakfast'),
   },
 };
 </script>
@@ -103,7 +76,7 @@ export default {
 }
 
 .container {
-  width: 55%;
+  width: 50%;
   height: 480px;
   text-align: left;
   margin-left: 20px;
@@ -112,21 +85,22 @@ export default {
 }
 
 .contentArea {
-  height: 490px;
+  margin-top: 20px;
+  height: 480px;
 }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
+/*
 .notBold {
   font-family: Freestyle Script;
   font-weight:normal;
   font-size: 22px;
 }
-
+*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/*
 .itemBtn {
   width: 95%;
   height: 60px;
@@ -152,4 +126,5 @@ ul {
   display: inline-block;
   color: white;
 }
+*/
 </style>

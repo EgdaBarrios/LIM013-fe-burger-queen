@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link class="topNav" to="/">Inicio</router-link> |
       <router-link class="topNav" to="/waiter">SoyUnMesero</router-link> |
+      <router-link class="topNav" to="/waiterTwo">SoyUnMeseroDos</router-link> |
       <router-link class="topNav" to="/kitchen">SoyJefeDeCocina</router-link>
     </div>
     <router-view/>

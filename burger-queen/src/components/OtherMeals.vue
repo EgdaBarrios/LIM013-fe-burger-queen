@@ -43,7 +43,7 @@
         <div class="sandwichList">
           <ul v-for="omd in otherMealsDrinks" :key="omd.id">
             <li>
-              <button type="button" class="itemBtn">
+              <button type="button" class="itemBtn" v-on:click="cant +=1">
                 <img class="iconImg" alt="Sandwich" src="../assets/iconBottle.png">
                 <div class="textBtn">
                   <h5>{{ omd.description }}</h5>
