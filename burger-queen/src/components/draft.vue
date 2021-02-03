@@ -354,3 +354,57 @@ ul {
 }
 */
 </style>
+
+---Register---
+
+<template>
+  <div class="register">
+    <form @submit.prevent="register">
+      <p class="alignLeftText">Eres nuevo usuario?</p>
+      <h2 class="alignLeftText">Regístrate aquí:</h2>
+      <input type="email" v-model="email" placeholder="Ingresa un correo">
+      <input type="pasword" v-model="pasword" placeholder="Ingresa una contraseña">
+      <button>Registrar</button>
+    </form>
+  </div>
+</template>
+
+<script>
+// import db from '@/firebase/init';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
+export default {
+  name: 'Register',
+  data() {
+    return {
+      email: '',
+      pasword: '',
+    };
+  },
+  methods: {
+    register() {
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password);
+    },
+  },
+};
+</script>
+
+<style scoped>
+.register {
+  width: 100%;
+  height: 195px;
+  margin: auto;
+  padding-top: 0px;
+  vertical-align: top;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.alignLeftText {
+  text-align: left;
+  padding-left: 45px;
+}
+</style>
+
+---
