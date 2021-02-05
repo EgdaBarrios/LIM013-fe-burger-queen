@@ -2,6 +2,8 @@
     <div id="nav">
       <div class="loggedUser">
         <p class="navText">SoyUnMesero</p>
+        <!--<p class="navText"><Register v-bind:authUser="authUser.email" v-bind:userName="userName"
+        v-bind:capitalize="capitalize"/></p>-->
         <button type="button" class="alarmButton">
           <img class="iconAlarm" alt="Order alarm" src="../assets/iconAlarm.png">
         </button>
@@ -19,8 +21,13 @@
 </template>
 
 <script>
+// import Register from '@/components/Register.vue';
+
 export default {
   name: 'Navbar',
+  components: {
+    // Register,
+  },
 };
 </script>
 

@@ -6,10 +6,10 @@
     <div class="container">
       <div class="contentArea">
         <div class="breakfastMenu">
-          <ul v-for="b in breakfast" :key="b.id">
+          <!--<ul v-for="b in breakfast" :key="b.id">
             <li><MenuBtn v-bind:description="b.description" v-bind:price="b.price"/></li>
           </ul>
-        </div>
+        </div>-->
         <!--<div class="subtitle">
           <h4><span class="notBold">Sandwiches</span></h4>
         </div>
@@ -24,22 +24,23 @@
                 </div>
               </button>
             </li>
-          </ul>
-        </div>-->
+          </ul>-->
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import MenuBtn from '@/components/MenuBtn.vue';
-import { db } from '../db';
+// import MenuBtn from '@/components/MenuBtn.vue';
+// import { db } from '../db';
 
 export default {
   name: 'Breakfast',
   components: {
-    MenuBtn,
+    // MenuBtn,
   },
+  /*
   data() {
     return {
       breakfast: [],
@@ -48,6 +49,7 @@ export default {
   firestore: {
     breakfast: db.collection('breakfast'),
   },
+  */
 };
 </script>
 

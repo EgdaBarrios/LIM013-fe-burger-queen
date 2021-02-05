@@ -1,3 +1,4 @@
+/*
 import Vue from 'vue';
 import { firestorePlugin } from 'vuefire';
 
@@ -14,7 +15,7 @@ new Vue({
   router,
   render: (h) => h(App),
 }).$mount('#app');
-/*
+*/
 import Vue from 'vue';
 import firebase from 'firebase/app';
 import App from './App.vue';
@@ -38,4 +39,3 @@ new Vue({
   router,
   render: (h) => h(App),
 }).$mount('#app');
-*/

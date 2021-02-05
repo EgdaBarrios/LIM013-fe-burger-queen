@@ -55,8 +55,9 @@ export default {
   width: 90%;
   height: 695px;
   margin: auto;
-  padding-top: 140px;
+  padding-top: 80px;
   box-sizing: border-box;
+  border-bottom: 2px solid #CC9933;
 }
 
 .logo {
@@ -65,12 +66,12 @@ export default {
 
 .container {
   width: 100%;
-  height: 215px;
+  height: 320px;
   margin: auto;
   padding-top: 50px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: bottom;
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
@@ -88,7 +89,7 @@ export default {
 
 .formContainer {
   width: 45%;
-  height: 195px;
+  height: 270px;
   margin: auto;
   padding-top: 0px;
   vertical-align: top;
@@ -109,6 +110,7 @@ export default {
 
 .mainText {
   text-align: right;
+  margin-top: 60px;
 }
 
 .icons {

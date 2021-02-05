@@ -1,3 +1,4 @@
+/*
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
@@ -15,3 +16,4 @@ export { Timestamp, GeoPoint };
 db.settings({ timestampsInSnapshots: true });
 
 // console.log(db.collection('breakfastSandwiches'));
+*/

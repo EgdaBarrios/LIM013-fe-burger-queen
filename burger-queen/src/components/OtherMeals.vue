@@ -4,7 +4,7 @@
       <h3 class="title">RESTO DEL DIA</h3>
     </div>
     <div class="container">
-      <div class="contentArea">
+      <!--<div class="contentArea">
         <div class="subtitle">
           <h4><span class="notBold">Hamburguesas</span></h4>
         </div>
@@ -53,16 +53,17 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
 
 <script>
-import { db } from '../db';
+// import { db } from '../db';
 
 export default {
   name: 'OtherMeals',
+  /*
   data() {
     return {
       otherMealsHamburgers: [],
@@ -76,6 +77,7 @@ export default {
     otherMealsSides: db.collection('otherMealsSides'),
     otherMealsDrinks: db.collection('otherMealsDrinks'),
   },
+  */
 };
 </script>
 
