@@ -35,6 +35,9 @@ const configOptions = {
 };
 firebase.initializeApp(configOptions);
 
+const eventBus = new Vue();
+export default (eventBus);
+
 new Vue({
   router,
   render: (h) => h(App),

@@ -353,4 +353,53 @@ ul {
   font-size: 16px;
 }
 */
+/*
+<!--<img :src="require(`../assets/menuIcon/${b.image}.png`)" />-->
+<!--<img :src="require(b.image)">-->
+*/
+// table;
+/*
+<table class="orderTab" v-if="newOrder.length">
+              <thead>
+                <tr class="bold">
+                  <th>Item</th>
+                  <th>Costo/U</th>
+                  <!--<th>Cant.</th>
+                  <th>Sub-total</th>-->
+                </tr>
+                <br>
+              </thead>
+              <tbody v-for="no in newOrder" :key="no.id">
+                <tr class="left">
+                  <td>{{ no.description }}</td>
+                  <td>S/ {{ no.price }}.00</td>
+                  <!--<td>-->
+                    <!--<CantBtn />-->
+                    <!--<MinusPlusInput :value="value"
+                    @getInputValue="getInputValue" />-->
+                    <!--<MinusPlusInput @input="inputValue"/>-->
+                    <!--<div class="cantField">
+                      <div class="minusplusnumber">
+                        <div class="mpbtn minus" v-on:click="mpminus()">-</div>
+                        <div id="field_container">
+                          <input type="number" v-model="newValue" />
+                        </div>
+                        <div class="mpbtn plus" v-on:click="mpplus()">+</div>
+                      </div>
+                    </div>-->
+                  <!--</td>-->
+                  <!--<td>S/ {{ no.price * value }}.00</td>-->
+                  <!--<td>S/ {{ no.price }}.00</td>-->
+                  <td><button v-on:click= "removeRow">Eliminar</button></td>
+                </tr>
+              </tbody>
+              <!--<tfoot>
+                <tr class="bold" v-bind:price="no.price">
+                  <td>Total</td>
+                  <td>S/ {{ no.price }}.00</td>
+                </tr>
+              </tfoot>-->
+            </table>
+            */
 </style>
+

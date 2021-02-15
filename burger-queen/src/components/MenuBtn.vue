@@ -2,23 +2,24 @@
   <div class="itemButton">
     <div id="btn">
       <button type="button" class="itemBtn" id="itemBtn"
-      @click="addToTabItemDescription(); addToTabItemPrice(); cantItems()">
+      @click="addToTab(); cantItems()">
         <!--<img class="iconImg" alt="Sandwich" src="../assets/iconSandwich.png">-->
         <div class="textBtn">
+          <img class="iconImg" alt="menuIcon" :src="image">
           <h5>{{ description }}</h5>
           <p>S/ {{ price }}.00</p>
         </div>
       </button>
     </div>
-    <div id="printOnClick">
+    <!--<div id="printOnClick">
       <div class="actionBtn" id="actionBtn">
         <p>{{ displayItemDescriptionText }}</p>
         <p>{{ displayItemPrice }}</p>
         <p>{{ cant }}</p>
         <p>S/ {{ subTotal }}.00</p>
-        <!--<button @click="removeRow()">Eliminar</button>-->
+        <button @click="removeRow()">Eliminar</button>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -30,11 +31,18 @@ export default {
       cant: 0,
       displayItemDescriptionText: '',
       displayItemPrice: '',
+      newOrder: [],
+      otherMeals: [],
     };
   },
   methods: {
     cantItems() {
       this.cant += 1;
+    },
+    addToTab(item) {
+      console.log('Soy un item de pedido');
+      this.newOrder.push(item.description, item.price);
+      // this.newItem = '';
     },
     addToTabItemDescription() {
       // debugger;
@@ -64,6 +72,7 @@ export default {
   props: [
     'description',
     'price',
+    'image',
     // 'displayItemDescriptionText',
     // 'msg',
   ],
@@ -88,6 +97,15 @@ ul {
   line-height: 0;
   text-align: center;
   color: white;
+}
+.iconImg {
+  width: 20%;
+  height: 50px;
+  padding: 0, 2px;
+  vertical-align: top;
+  display: inline-block;
+  margin: 0;
+  background-color: white;
 }
 .textBtn {
   width: 78%;

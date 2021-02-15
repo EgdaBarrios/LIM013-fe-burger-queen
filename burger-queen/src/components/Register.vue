@@ -32,6 +32,10 @@ import 'firebase/auth';
 
 export default {
   name: 'Register',
+  props: {
+    userName: String,
+    capitalize: String,
+  },
   data() {
     return {
       email: '',
@@ -79,14 +83,6 @@ export default {
       return this.authUser.email;
     },
   },
-  /*
-  props: [
-    'currentUser',
-    'userName',
-    'capitalize',
-    // 'msg',
-  ],
-  */
 };
 </script>
 
